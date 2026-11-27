@@ -84,6 +84,9 @@ section { padding: 72px 0; border-top: 1px solid var(--border-subtle); }
 .nav-links a { color: var(--muted); font-size: 0.875rem; font-weight: 500; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); text-decoration: none; }
 .nav-cta { padding: 8px 14px !important; font-size: 0.875rem !important; }
+/* Nav links set a pale text colour that beats .btn-grad (specificity) —
+   the white ₹49 pill ended up with white text. Force dark text on the nav CTA. */
+.nav-links a.btn-grad { color: var(--primary-fg); }
 @media (max-width: 760px) {
   .nav-links a:not(.btn) { display: none; }
 }
@@ -459,6 +462,36 @@ footer { border-top: 1px solid var(--border-subtle); padding: 44px 0 34px; color
   padding: 7px 14px; white-space: nowrap; margin-right: 10px;
 }
 
+/* --- Sliding prompt cards: two auto-sliding rows, opposite directions ---
+   Reference-style card carousel. Rows fade at the edges, pause on hover/touch,
+   and fall back to swipeable rows when motion is reduced. */
+.slide-cards { padding: 8px 0 4px; }
+.slide-row {
+  overflow: hidden; margin-bottom: 12px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.slide-track {
+  display: flex; gap: 12px; width: max-content;
+  will-change: transform;
+  animation: slide-left 48s linear infinite;
+}
+.slide-row.rev .slide-track { animation: slide-right 56s linear infinite; }
+@keyframes slide-left { to { transform: translateX(-50%); } }
+@keyframes slide-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.slide-row:hover .slide-track, .slide-row:active .slide-track { animation-play-state: paused; }
+.slide-card {
+  flex: none; width: 300px; max-width: 82vw;
+  background: var(--surface); border: 1px solid var(--border-subtle);
+  border-radius: var(--radius); padding: 18px;
+  text-align: left; color: var(--text);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.slide-card:hover { border-color: rgba(255, 255, 255, 0.45); transform: translateY(-2px); text-decoration: none; }
+.slide-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; margin: 9px 0 6px; }
+.slide-card p { color: var(--muted); font-size: 0.875rem; line-height: 1.55; margin: 0; }
+.slide-go { display: block; margin-top: 12px; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; color: var(--muted-2); }
+
 /* --- Scroll reveal stagger: siblings enter one after another --- */
 .reveal { transition-delay: calc(var(--i, 0) * 70ms); }
 
@@ -544,7 +577,8 @@ footer { border-top: 1px solid var(--border-subtle); padding: 44px 0 34px; color
   .hero-ready .hero-ctas,
   .hero-ready .hero .type-box,
   .hero-ready .hero .float-row,
-  .streaks span, .hero-flare, .hero-glow, .marquee-track { animation: none !important; }
+  .streaks span, .hero-flare, .hero-glow, .marquee-track, .slide-track { animation: none !important; }
+  .slide-row { overflow-x: auto; }
   .hero-word { opacity: 1; filter: none; transform: none; }
   .hero-ready .hero .eyebrow,
   .hero-ready .hero .lead,
