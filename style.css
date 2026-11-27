@@ -467,25 +467,24 @@ footer { border-top: 1px solid var(--border-subtle); padding: 44px 0 34px; color
    and fall back to swipeable rows when motion is reduced. */
 .slide-cards { padding: 8px 0 4px; }
 .slide-row {
-  overflow: hidden; margin-bottom: 12px;
+  overflow-x: auto; margin-bottom: 12px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  cursor: grab;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
+.slide-row::-webkit-scrollbar { display: none; }
+.slide-row:active { cursor: grabbing; }
 .slide-track {
   display: flex; gap: 12px; width: max-content;
-  will-change: transform;
-  animation: slide-left 48s linear infinite;
 }
-.slide-row.rev .slide-track { animation: slide-right 56s linear infinite; }
-@keyframes slide-left { to { transform: translateX(-50%); } }
-@keyframes slide-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-.slide-row:hover .slide-track, .slide-row:active .slide-track { animation-play-state: paused; }
 .slide-card {
   flex: none; width: 300px; max-width: 82vw;
   background: var(--surface); border: 1px solid var(--border-subtle);
   border-radius: var(--radius); padding: 18px;
   text-align: left; color: var(--text);
   transition: border-color 0.3s ease, transform 0.3s ease;
+  user-select: none; -webkit-user-select: none;
 }
 .slide-card:hover { border-color: rgba(255, 255, 255, 0.45); transform: translateY(-2px); text-decoration: none; }
 .slide-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; letter-spacing: -0.02em; margin: 9px 0 6px; }
@@ -577,8 +576,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 44px 0 34px; color
   .hero-ready .hero-ctas,
   .hero-ready .hero .type-box,
   .hero-ready .hero .float-row,
-  .streaks span, .hero-flare, .hero-glow, .marquee-track, .slide-track { animation: none !important; }
-  .slide-row { overflow-x: auto; }
+  .streaks span, .hero-flare, .hero-glow, .marquee-track { animation: none !important; }
   .hero-word { opacity: 1; filter: none; transform: none; }
   .hero-ready .hero .eyebrow,
   .hero-ready .hero .lead,

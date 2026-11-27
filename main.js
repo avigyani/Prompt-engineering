@@ -164,6 +164,106 @@
     });
   }
 
+  /* ---------- Sliding prompt cards: finger-swipeable + auto-advance ----------
+     Rows are native horizontal scrollers (overflow-x: auto), so a finger can
+     swipe them either way. JS auto-advances one card at a time and loops
+     seamlessly over the duplicated cards. Auto-advance pauses while the user
+     holds, drags or scrolls the row, and resumes 3s after they let go.
+     Mouse drag is added by hand (native overflow scroll does not drag with
+     a mouse). No auto-advance under reduced motion — rows stay swipeable. */
+  var slideRows = document.querySelectorAll(".slide-row");
+  if (slideRows.length && !reduceMotion) {
+    slideRows.forEach(function (row) {
+      var track = row.querySelector(".slide-track");
+      if (!track) return;
+      var dir = row.classList.contains("rev") ? -1 : 1;
+      var timer = null, resumeTimer = null, userHolding = false, rowVisible = true;
+      var dragMoved = 0;
+
+      function halfWidth() { return track.scrollWidth / 2; }
+      function cardStep() {
+        var card = track.querySelector(".slide-card");
+        return card ? card.offsetWidth + 12 : 312;
+      }
+      function tick() {
+        if (userHolding || !rowVisible || document.hidden) return;
+        row.scrollBy({ left: dir * cardStep(), behavior: "smooth" });
+      }
+      function start() {
+        if (timer) return;
+        timer = setInterval(tick, 2800);
+      }
+      function stop() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+      function pauseForUser() {
+        stop();
+        if (resumeTimer) clearTimeout(resumeTimer);
+      }
+      function resumeSoon() {
+        if (resumeTimer) clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(start, 3000);
+      }
+
+      /* Seamless loop over the duplicated cards. */
+      row.addEventListener("scroll", function () {
+        var half = halfWidth();
+        if (dir === 1 && row.scrollLeft >= half) row.scrollLeft -= half;
+        if (dir === -1 && row.scrollLeft <= 0) row.scrollLeft += half;
+      }, { passive: true });
+
+      /* Hold / drag / scroll pauses; letting go resumes after 3s. */
+      row.addEventListener("pointerdown", function (e) {
+        userHolding = true;
+        pauseForUser();
+        if (e.pointerType === "mouse") startMouseDrag(e);
+      });
+      ["pointerup", "pointercancel"].forEach(function (ev) {
+        row.addEventListener(ev, function () { userHolding = false; resumeSoon(); });
+      });
+      row.addEventListener("mouseenter", pauseForUser);
+      row.addEventListener("mouseleave", function () { if (!userHolding) resumeSoon(); });
+      row.addEventListener("wheel", function () { pauseForUser(); resumeSoon(); }, { passive: true });
+      track.addEventListener("dragstart", function (e) { e.preventDefault(); });
+
+      /* Mouse drag (touch uses native scrolling). */
+      function startMouseDrag(e) {
+        var startX = e.clientX, startLeft = row.scrollLeft, moved = 0;
+        function move(ev) {
+          moved = Math.max(moved, Math.abs(ev.clientX - startX));
+          row.scrollLeft = startLeft - (ev.clientX - startX);
+        }
+        function up() {
+          dragMoved = moved;
+          document.removeEventListener("pointermove", move);
+          document.removeEventListener("pointerup", up);
+          setTimeout(function () { dragMoved = 0; }, 80);
+        }
+        document.addEventListener("pointermove", move);
+        document.addEventListener("pointerup", up);
+      }
+      /* A mouse drag must not open the card link on release. */
+      track.addEventListener("click", function (e) {
+        if (dragMoved > 8) { e.preventDefault(); e.stopPropagation(); }
+      }, true);
+
+      /* Only auto-advance while the row is on screen. */
+      if ("IntersectionObserver" in window) {
+        var vio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            rowVisible = en.isIntersecting;
+            if (rowVisible && !userHolding) start(); else stop();
+          });
+        }, { threshold: 0.05 });
+        vio.observe(row);
+      }
+
+      /* Backward row starts at the second copy so it can scroll backwards. */
+      if (dir === -1) row.scrollLeft = halfWidth();
+      start();
+    });
+  }
+
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll(".faq-q").forEach(function (q) {
     q.addEventListener("click", function () {
