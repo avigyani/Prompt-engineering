@@ -1,0 +1,39 @@
+# Prompt Engineering
+
+> Learn the skill that replaces coding: prompt engineering. 30+ free copy-paste prompts for images, video, writing, code, business and study, plus a 7-module advanced course (22 lessons) on coding with AI, complex problems, token efficiency, few-shot prompting, prompt systems and pro prompts for Claude, ChatGPT and Gemini. Advanced course: ₹49 one-time via UPI, read in the browser.
+
+## Key facts
+
+- Site: Prompt Engineering — a practical prompt engineering course website in English.
+- Free library: 30 copy-paste prompts in 6 categories (Image, Video, Writing, Code, Business, Study). Free forever, no account needed.
+- Advanced course: 7 modules, 22 lessons. Price: ₹49 one-time (INR), paid via UPI to Nizamuddin (UPI ID 7026384664@kotakbank). After payment, the buyer sends the UTR/transaction ID via a form and the reader link is emailed within 24 hours.
+- Reader: browser-only reading, no download. Every prompt has a copy button.
+- Token saving: a main feature — Module 4 (Token Efficiency) teaches using fewer tokens to get more work done: short prompts, compression techniques and reusable templates.
+- Contact: nizampj23@gmail.com
+- Author: Nizamuddin
+
+## Pages
+
+- [Home](https://avigyani.github.io/prompt-engineering/): introduction to prompt engineering, how it works in 3 steps, Free vs Advanced comparison, advanced course teaser with sample prompts, FAQ.
+- [Free Prompts](https://avigyani.github.io/prompt-engineering/free-prompts.html): 30 free copy-paste prompts — 5 each for image generation, video scripts, writing, code, business and study — with category filters and one-tap copy.
+- [Advanced Course](https://avigyani.github.io/prompt-engineering/advanced.html): full curriculum (7 modules, 22 lessons), free preview of Module 1 Lesson 1, 3 sample advanced prompts, ₹49 UPI payment (QR code and deep link), payment-confirmation form.
+- [About](https://avigyani.github.io/prompt-engineering/about.html): what Prompt Engineering is, the free prompts, the advanced course, who makes it (Nizamuddin) and how to contact (nizampj23@gmail.com).
+- [Course Reader](https://avigyani.github.io/prompt-engineering/reader.html): the advanced course reader — 22 lessons with real techniques, before-and-after prompt examples and practice tasks.
+
+## Advanced course curriculum
+
+- Module 1 — Prompt Foundations: the RTCF framework (Role, Task, Context, Format); being specific; iterating instead of restarting.
+- Module 2 — Coding with AI: building a feature from a description; debugging like a senior developer; refactoring and explaining code.
+- Module 3 — Complex Problems: decomposing problems; chain-of-thought prompting; constraints that stop the AI guessing.
+- Module 4 — Token Efficiency: why short prompts win; compression techniques; reusable templates.
+- Module 5 — Few-Shot & Examples: showing instead of telling; style transfer; consistency at scale.
+- Module 6 — Prompt Systems: building a template library; chaining prompts; evaluating results.
+- Module 7 — Pro Prompts (Claude, ChatGPT & Gemini): prompting Claude with XML tags, Projects and Artifacts; prompting ChatGPT with custom GPTs, Canvas and Deep Research; prompting Gemini with Gems, NotebookLM and multimodal prompts; guiding high-end models with system prompts, self-consistency and meta-prompting.
+
+## FAQ (short answers)
+
+- What is prompt engineering? Writing clear, structured instructions for AI tools (ChatGPT, Claude, Gemini) so they produce exactly the result you want.
+- Do I need to know coding? No. Prompt engineering is a language skill, not a programming skill.
+- Are the free prompts really free? Yes — all 30 are free forever, no account needed.
+- How do I get the advanced course? Pay ₹49 via UPI, send the UTR via the form, and the reader link is emailed within 24 hours.
+- What is token efficiency? Writing shorter prompts that cost fewer tokens and produce better output.

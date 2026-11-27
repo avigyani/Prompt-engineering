@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Prompt Engineering Course — Reader | Prompt Engineering</title>
+<meta name="description" content="Read the Advanced Prompt Engineering Course in your browser: 7 modules, 22 lessons on coding with AI, complex problems, token efficiency, few-shot prompting, prompt systems and pro prompts for Claude, ChatGPT and Gemini.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://avigyani.github.io/prompt-engineering/reader.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Advanced Prompt Engineering Course — Reader | Prompt Engineering">
+<meta property="og:description" content="Seven modules, twenty-two lessons. Read in your browser.">
+<meta property="og:url" content="https://avigyani.github.io/prompt-engineering/reader.html">
+<meta property="og:site_name" content="Prompt Engineering">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23ffffff'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23000000' font-family='sans-serif' font-weight='bold'>P</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html"><span class="logo-mark">✦</span><span>Prompt <em>Engineering</em></span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="free-prompts.html">Free Prompts</a>
+      <a href="advanced.html">Advanced Course</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="wrap" style="padding: 56px 20px 10px;">
+  <span class="eyebrow">Advanced Course · Reader</span>
+  <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem);">Advanced Prompt Engineering</h1>
+  <p class="lead">Seven modules, twenty-two lessons. Read in your browser — use the contents to jump between lessons, and copy any prompt with its button. Includes a full module on token saving: use fewer tokens, get more work done.</p>
+</header>
+
+<section style="padding-top: 26px;">
+  <div class="wrap reader-layout">
+    <aside class="reader-side">
+      <h3>Contents</h3>
+      <ul>
+        <li class="mod-label">Module 1 · Foundations</li>
+        <li><a href="#m1l1" data-lesson="m1l1">1.1 The RTCF Framework</a></li>
+        <li><a href="#m1l2" data-lesson="m1l2">1.2 Being Specific</a></li>
+        <li><a href="#m1l3" data-lesson="m1l3">1.3 Iterate, Don't Restart</a></li>
+        <li class="mod-label">Module 2 · Coding with AI</li>
+        <li><a href="#m2l1" data-lesson="m2l1">2.1 Build a Feature</a></li>
+        <li><a href="#m2l2" data-lesson="m2l2">2.2 Debug Like a Senior</a></li>
+        <li><a href="#m2l3" data-lesson="m2l3">2.3 Refactor and Explain</a></li>
+        <li class="mod-label">Module 3 · Complex Problems</li>
+        <li><a href="#m3l1" data-lesson="m3l1">3.1 Decompose First</a></li>
+        <li><a href="#m3l2" data-lesson="m3l2">3.2 Chain-of-Thought</a></li>
+        <li><a href="#m3l3" data-lesson="m3l3">3.3 Constraints</a></li>
+        <li class="mod-label">Module 4 · Token Efficiency</li>
+        <li><a href="#m4l1" data-lesson="m4l1">4.1 Why Short Prompts Win</a></li>
+        <li><a href="#m4l2" data-lesson="m4l2">4.2 Compression Techniques</a></li>
+        <li><a href="#m4l3" data-lesson="m4l3">4.3 Reusable Templates</a></li>
+        <li class="mod-label">Module 5 · Few-Shot &amp; Examples</li>
+        <li><a href="#m5l1" data-lesson="m5l1">5.1 Show, Don't Tell</a></li>
+        <li><a href="#m5l2" data-lesson="m5l2">5.2 Style Transfer</a></li>
+        <li><a href="#m5l3" data-lesson="m5l3">5.3 Consistency at Scale</a></li>
+        <li class="mod-label">Module 6 · Prompt Systems</li>
+        <li><a href="#m6l1" data-lesson="m6l1">6.1 Template Library</a></li>
+        <li><a href="#m6l2" data-lesson="m6l2">6.2 Chaining Prompts</a></li>
+        <li><a href="#m6l3" data-lesson="m6l3">6.3 Evaluating Results</a></li>
+        <li class="mod-label">Module 7 · Pro Prompts</li>
+        <li><a href="#m7l1" data-lesson="m7l1">7.1 Prompting Claude</a></li>
+        <li><a href="#m7l2" data-lesson="m7l2">7.2 Prompting ChatGPT</a></li>
+        <li><a href="#m7l3" data-lesson="m7l3">7.3 Prompting Gemini</a></li>
+        <li><a href="#m7l4" data-lesson="m7l4">7.4 High-End Models</a></li>
+      </ul>
+    </aside>
+
+    <div class="reader-main">
+
+      <!-- ============ MODULE 1 ============ -->
+      <section class="lesson" id="m1l1">
+        <span class="tag">Module 1 · Lesson 1</span>
+        <h2>The RTCF Framework — Role, Task, Context, Format</h2>
+        <p class="lesson-meta">Prompt Foundations · 4 min read</p>
+        <p>Most prompts fail for the same reason: they ask the AI to guess. "Write about marketing" leaves everything open — the audience, the length, the tone, the purpose. The AI guesses, and the answer feels generic. The fix is a structure used by professional prompt engineers: RTCF.</p>
+        <p><b>Role</b> tells the AI who to be: "Act as a senior copywriter." <b>Task</b> says exactly what to do: "Write a 150-word product description." <b>Context</b> gives the facts it needs: the product, the audience, the price. <b>Format</b> says how the answer should look: "Three short paragraphs, no bullet points, end with a question." Four parts, one sentence each, and the same request produces a completely different answer.</p>
+        <p>The framework works because each part removes one guess. Role sets the standard. Task sets the goal. Context sets the facts. Format sets the shape. When an answer is weak, one of the four is usually missing — add it, and the next answer improves immediately.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m1l1-before">Weak: "Write about my restaurant."</div>
+        <button class="copy-btn" data-copy="m1l1-before">⧉ Copy</button>
+        <div class="prompt-block" id="m1l1-after">Strong: "Act as a food writer for a Bengaluru audience. Write a 120-word Instagram caption for a seafood restaurant in Chikkabanavara, announcing a weekend family thali at ₹799. Mention the sea-facing seating and the live grill counter. Tone: warm and inviting, no hype words. End with a call to action: book a table this weekend."</div>
+        <button class="copy-btn" data-copy="m1l1-after">⧉ Copy the strong version</button>
+        <div class="practice"><p><b>Practice task:</b> take one prompt you used this week and rewrite it with all four RTCF parts. Run both versions and compare the answers side by side.</p></div>
+      </section>
+
+      <section class="lesson" id="m1l2">
+        <span class="tag">Module 1 · Lesson 2</span>
+        <h2>Being Specific — The Vagueness Tax</h2>
+        <p class="lesson-meta">Prompt Foundations · 4 min read</p>
+        <p>Every vague word in a prompt is a decision you hand to the AI — and every decision it makes for you is a chance to get it wrong. "Write something good about our product" forces the AI to invent the audience, the tone, the length and the selling point. The result is polite, empty text. Specificity is not about writing longer prompts; it is about replacing open words with closed ones.</p>
+        <p>Swap adjectives for numbers: not "a short email" but "an email under 80 words". Swap general nouns for named ones: not "our customers" but "first-time buyers aged 25–35 in Bengaluru". Swap "good" for a test: "the reader should be able to repeat the main point in one sentence". Each replacement removes one guess, and the answer gets sharper every time.</p>
+        <p>There is a limit. Over-specifying every detail makes the prompt brittle and wastes tokens. The rule: specify the outcome and the constraints, and leave the method to the AI. Tell it what good looks like, not how to write every sentence.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m1l2-before">Weak: "Give me ideas to grow my shop."</div>
+        <button class="copy-btn" data-copy="m1l2-before">⧉ Copy</button>
+        <div class="prompt-block" id="m1l2-after">Strong: "Give me 5 low-cost ideas to increase weekday footfall at a 40-seat seafood restaurant in Chikkabanavara, Bengaluru. Each idea must cost under ₹2,000, need no paid ads, and include one sentence on how I will measure whether it worked in 2 weeks."</div>
+        <button class="copy-btn" data-copy="m1l2-after">⧉ Copy the strong version</button>
+        <h4>Try it</h4>
+        <div class="prompt-block" id="m1l2-try">Rewrite this vague request into a specific one, then run it: "Help me learn Spanish."</div>
+        <button class="copy-btn" data-copy="m1l2-try">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> find the three vaguest words in a prompt you wrote recently. Replace each with a number, a name or a test. Run the new version.</p></div>
+      </section>
+
+      <section class="lesson" id="m1l3">
+        <span class="tag">Module 1 · Lesson 3</span>
+        <h2>Iterate, Don't Restart</h2>
+        <p class="lesson-meta">Prompt Foundations · 4 min read</p>
+        <p>When an answer disappoints, most people delete the chat and start over. That throws away the most valuable thing in the conversation: the context the AI has already built. A weak answer is not a failed prompt — it is a first draft. The fastest fix is a single follow-up that names exactly what to change.</p>
+        <p>Good follow-ups are surgical. "Shorter" is vague; "Cut this to half the length and keep all five points" is a fix. "Better" is vague; "Rewrite the opening so a busy shop owner understands the benefit in ten seconds" is a fix. Name the problem, name the target, and keep the rest. Three short rounds of this beat three fresh prompts every time, because each round keeps what already worked.</p>
+        <p>Keep a small set of follow-up phrases ready: "Make it shorter, keep the facts", "Give me three options for this line", "Explain this part as if to a beginner", "Now do the same for this new input". They turn one prompt into a workflow.</p>
+        <h4>Example follow-ups</h4>
+        <div class="prompt-block" id="m1l3-a">After a long answer: "Keep everything, but cut it to 120 words and put the conclusion first."</div>
+        <button class="copy-btn" data-copy="m1l3-a">⧉ Copy</button>
+        <div class="prompt-block" id="m1l3-b">After a wrong tone: "Same content, but rewrite it for a 45-year-old restaurant owner who has no time — direct, practical, no jargon."</div>
+        <button class="copy-btn" data-copy="m1l3-b">⧉ Copy</button>
+        <div class="prompt-block" id="m1l3-c">After a weak idea list: "Keep ideas 2 and 4. Replace the rest with ideas that cost nothing and can be done this week."</div>
+        <button class="copy-btn" data-copy="m1l3-c">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take an old chat where the answer disappointed you. Instead of restarting, write three follow-ups — one for length, one for tone, one for content — and run them in order.</p></div>
+      </section>
+
+      <!-- ============ MODULE 2 ============ -->
+      <section class="lesson" id="m2l1">
+        <span class="tag">Module 2 · Lesson 1</span>
+        <h2>Build a Feature from a Description</h2>
+        <p class="lesson-meta">Coding with AI · 5 min read</p>
+        <p>You do not need to write code to build software any more — but you do need to describe it precisely. The AI writes the code; you write the specification. A good build prompt reads like a work order: what the feature is, what it must do, what it must not do, and how you will know it works.</p>
+        <p>Start with the user, not the technology: "A visitor to a restaurant website should be able to book a table by choosing a date, time and party size, and see a confirmation message." Then add constraints: "Single HTML file, no external libraries, works offline." Then add the acceptance test: "The submit button stays disabled until all three fields are valid." That last line matters most — without it, the AI decides what "done" means, and it usually decides wrong.</p>
+        <p>Ask for the code first and the explanation second. "Give me the complete code, then a 5-bullet explanation of how each requirement is met." That order keeps the answer usable: you can copy the code immediately, and the explanation lets you check it.</p>
+        <h4>Example prompt</h4>
+        <div class="prompt-block" id="m2l1-a">Act as a senior front-end developer. Build a table-booking form for a restaurant website in a single HTML file: date picker, time slots from 12:00 to 22:00, party size 1–10, name and phone fields. Validate that the date is today or later and the phone has 10 digits. Show inline error messages and keep the submit button disabled until the form is valid. Use semantic HTML and CSS only, no frameworks. After the code, list how each requirement is met, one bullet each.</div>
+        <button class="copy-btn" data-copy="m2l1-a">⧉ Copy</button>
+        <div class="prompt-block" id="m2l1-b">Build a BMI calculator as a single web page. Inputs: height in cm, weight in kg. Output: BMI value to one decimal and the category (underweight / normal / overweight / obese). Show the healthy weight range for the given height. No frameworks, clean layout, mobile-first.</div>
+        <button class="copy-btn" data-copy="m2l1-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> describe one small feature you actually want — a form, a calculator, a list — in three sentences: who uses it, what it does, how you will test it. Send that description to an AI tool and check the result against your test.</p></div>
+      </section>
+
+      <section class="lesson" id="m2l2">
+        <span class="tag">Module 2 · Lesson 2</span>
+        <h2>Debug Like a Senior Developer</h2>
+        <p class="lesson-meta">Coding with AI · 5 min read</p>
+        <p>Most debugging prompts fail because they give the AI half the story. "My code doesn't work" tells it nothing. A senior developer debugging a problem always brings four things: the error message in full, the code around the error, what the code should do, and what it actually does. Give the AI the same four things and the fix arrives in one round instead of five.</p>
+        <p>Paste the complete error, not a summary of it — the line numbers and error type are the diagnosis. Paste the smallest piece of code that reproduces the problem, not the whole file. Then state the expectation: "It should save the booking and show a confirmation; instead the page reloads with no message." That contrast between expected and actual is what points the AI at the real cause.</p>
+        <p>Finally, ask for the smallest fix, not a rewrite. "Change as few lines as possible and explain why this fix works." A rewrite hides the lesson; a small fix teaches you what went wrong and stops it happening again.</p>
+        <h4>Example prompts</h4>
+        <div class="prompt-block" id="m2l2-a">I am getting this error: [paste the full error message]. Here is the code around it: [paste code]. The code should [expected behaviour]; instead it [actual behaviour]. Tell me: (1) what the error means in plain language, (2) the most likely cause, (3) the smallest fix, with the corrected code, (4) one way to prevent this error next time.</div>
+        <button class="copy-btn" data-copy="m2l2-a">⧉ Copy</button>
+        <div class="prompt-block" id="m2l2-b">This function works for most inputs but returns the wrong total when the cart is empty. Here is the function and two test cases — one passing, one failing. Find the bug, fix only the lines that cause it, and explain the logic error in two sentences.</div>
+        <button class="copy-btn" data-copy="m2l2-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take any error you have seen recently — or invent one by breaking a working snippet — and write a debug prompt with all four parts: error, code, expected, actual.</p></div>
+      </section>
+
+      <section class="lesson" id="m2l3">
+        <span class="tag">Module 2 · Lesson 3</span>
+        <h2>Refactor and Explain Code</h2>
+        <p class="lesson-meta">Coding with AI · 4 min read</p>
+        <p>Refactoring means changing how code is written without changing what it does. It is the safest way to use AI on code you care about, because the behaviour stays the same while the readability improves. The key instruction is a constraint: "Do not change what it does." Without that line, the AI will happily improve the code into something different — and broken.</p>
+        <p>Ask for specific improvements, not general ones. "Rename variables to say what they hold, split any function longer than 20 lines, and remove duplication" gives the AI a checklist. "Make it better" gives it a free hand. After the refactor, ask it to list each change in one line with the reason — that list is your review. If a change would alter behaviour, it should leave it out and tell you.</p>
+        <p>Explaining code works the same way in reverse. Give the AI the code and an audience: "Explain this to a beginner who knows no programming, using one everyday analogy." The analogy forces the AI to find the core idea instead of restating the syntax line by line.</p>
+        <h4>Example prompts</h4>
+        <div class="prompt-block" id="m2l3-a">Refactor this code for readability only — do not change what it does. Rename variables to say what they hold, split any function longer than 20 lines, and remove duplication. Show me the refactored code, then list each change in one line with the reason. If a change would alter behaviour, leave it out and tell me. Code: [paste code]</div>
+        <button class="copy-btn" data-copy="m2l3-a">⧉ Copy</button>
+        <div class="prompt-block" id="m2l3-b">Explain this code to someone who has never programmed. Group related lines together, use one kitchen analogy for the main idea, and finish with one sentence on what the code achieves. Code: [paste code]</div>
+        <button class="copy-btn" data-copy="m2l3-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take a piece of code at least 30 lines long — yours or from the internet — and ask for a readability refactor with the behaviour constraint. Read the change list before the code.</p></div>
+      </section>
+
+      <!-- ============ MODULE 3 ============ -->
+      <section class="lesson" id="m3l1">
+        <span class="tag">Module 3 · Lesson 1</span>
+        <h2>Decompose Before You Ask</h2>
+        <p class="lesson-meta">Complex Problems · 5 min read</p>
+        <p>Big problems fail as single prompts because the AI has to do five kinds of thinking at once: understand the goal, gather facts, compare options, decide, and present the result. Quality collapses under that load. Decomposing means splitting the problem into small pieces and solving them one at a time — and it is the single biggest upgrade to your prompting.</p>
+        <p>Take "Plan a product launch" and split it: first the audience, then the message, then the channels, then the timeline, then the budget. Each piece is a prompt the AI can answer well. Each answer becomes the context for the next prompt. The final plan is better because every step was done properly instead of all steps being done thinly.</p>
+        <p>Decompose by asking the AI to do it for you when the problem is unfamiliar: "Break this problem into 5 steps I can solve one at a time, and tell me what information each step needs." Then solve the steps in order, in separate messages, carrying the results forward.</p>
+        <h4>Example prompts</h4>
+        <div class="prompt-block" id="m3l1-a">I need to [big goal, e.g. launch a tiffin service near a college]. Break this into 6 steps I can solve one at a time. For each step, give me: what the step decides, what information it needs, and what a good result looks like. Do not solve the steps — only list them.</div>
+        <button class="copy-btn" data-copy="m3l1-a">⧉ Copy</button>
+        <div class="prompt-block" id="m3l1-b">We have a problem: [describe it in 2 lines]. Split it into the smallest sub-problems you can, in the order they should be solved. For each one, say whether it needs data, a decision, or creative work.</div>
+        <button class="copy-btn" data-copy="m3l1-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> pick one task you have been avoiding because it feels too big. Decompose it into 5 steps with the prompt above, then solve only step 1 today.</p></div>
+      </section>
+
+      <section class="lesson" id="m3l2">
+        <span class="tag">Module 3 · Lesson 2</span>
+        <h2>Chain-of-Thought Prompting</h2>
+        <p class="lesson-meta">Complex Problems · 5 min read</p>
+        <p>When a question needs reasoning — maths, planning, comparing options — the AI often jumps to an answer and gets it wrong. Chain-of-thought prompting fixes this with one instruction: "Think step by step." Those four words make the AI show its working before concluding, and the accuracy jump on reasoning tasks is dramatic.</p>
+        <p>It works because the AI generates text one piece at a time, and each piece becomes context for the next. Without the instruction, it commits to an answer early and then justifies it. With the instruction, it works through the problem in stages and catches its own mistakes along the way. Add "show each step, then give the final answer on the last line" to keep the reasoning readable and the answer easy to find.</p>
+        <p>Use it whenever the task has more than one step: calculations, schedules, comparisons, diagnoses. Do not use it for simple recall or creative writing — there, the extra reasoning adds noise instead of accuracy.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m3l2-before">Weak: "A shop earns ₹8,000 on weekdays and ₹15,000 on weekends. What is the monthly revenue?"</div>
+        <button class="copy-btn" data-copy="m3l2-before">⧉ Copy</button>
+        <div class="prompt-block" id="m3l2-after">Strong: "A shop earns ₹8,000 per weekday and ₹15,000 per weekend day. Think step by step: first count the weekdays and weekend days in a 30-day month starting on a Monday, then calculate weekday revenue, then weekend revenue, then add them. Show each step, then give the final monthly revenue on the last line."</div>
+        <button class="copy-btn" data-copy="m3l2-after">⧉ Copy the strong version</button>
+        <div class="prompt-block" id="m3l2-b">Compare these two suppliers for my shop. Think step by step: first list the price per unit, delivery time and minimum order for each; then calculate the monthly cost at 500 units; then list one risk for each; then recommend one and give the single strongest reason.</div>
+        <button class="copy-btn" data-copy="m3l2-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take any question with a calculation or a comparison in it and ask it twice — once plain, once with "think step by step". Compare the answers.</p></div>
+      </section>
+
+      <section class="lesson" id="m3l3">
+        <span class="tag">Module 3 · Lesson 3</span>
+        <h2>Constraints That Stop Guessing</h2>
+        <p class="lesson-meta">Complex Problems · 4 min read</p>
+        <p>When the AI invents facts, the cause is usually an open space in the prompt. It fills gaps with plausible-sounding guesses because nothing told it not to. Constraints close those gaps. "If a number is missing, write 'not stated' instead of guessing" is a constraint. "Use only the facts in this document" is a constraint. "Maximum 5 bullets, 15 words each" is a constraint. Each one removes a freedom the AI would otherwise use to invent.</p>
+        <p>The most powerful constraints are about sources and uncertainty. Tell the AI where its facts must come from, and what to do when they are absent. "Base every claim on the attached document. If the document does not say it, say so." That single line turns a confident-sounding fabrication into an honest "not stated".</p>
+        <p>Constraints also control shape: length, format, tone, audience. But keep them few and checkable. Five constraints the reader can verify beat fifteen the AI will quietly ignore. If a constraint matters, put it at the end of the prompt, where the AI pays most attention to it.</p>
+        <h4>Example prompts</h4>
+        <div class="prompt-block" id="m3l3-a">Summarise this report using only the facts in it. Do not add information from elsewhere. If a figure is missing, write "not stated" — never estimate. Maximum 5 bullets, 15 words each. Report: [paste report]</div>
+        <button class="copy-btn" data-copy="m3l3-a">⧉ Copy</button>
+        <div class="prompt-block" id="m3l3-b">Write a product description for [product] in exactly 80 words. Do not use the words "amazing", "best" or "revolutionary". Include the price, the size and one real use case. If you are unsure about any fact, leave it out rather than guessing.</div>
+        <button class="copy-btn" data-copy="m3l3-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take a prompt that once produced a made-up fact. Add two constraints — one about sources, one about what to do when information is missing — and run it again.</p></div>
+      </section>
+
+      <!-- ============ MODULE 4 ============ -->
+      <section class="lesson" id="m4l1">
+        <span class="tag">Module 4 · Lesson 1</span>
+        <h2>Why Short Prompts Win</h2>
+        <p class="lesson-meta">Token Efficiency · 4 min read</p>
+        <div class="callout-sm">
+          <p style="margin-bottom: 0;"><b>★ Token saving — a main feature of this course:</b> this module teaches you to use fewer tokens and get more work done — shorter prompts, compression techniques and reusable templates.</p>
+        </div>
+        <p>AI tools charge by the token — roughly three quarters of a word in English. Every word you send and every word you receive costs tokens, and most paid plans give you a fixed amount per month. A 300-word prompt that produces a 1,000-word answer costs more than four times as much as a 50-word prompt that produces the same answer. Length is money.</p>
+        <p>But the cost argument is only half the story. Long prompts also perform worse. The more instructions you pile in, the more the AI has to juggle, and the more likely it is to drop one of them. A short prompt with one clear job gets a focused answer; a long prompt with six jobs gets a mediocre answer to all of them. Short is not just cheaper — it is better.</p>
+        <p>The test is simple: can you delete a sentence without changing the answer? If yes, delete it. Most prompts can lose a third of their words this way — greetings, apologies, background the AI does not need, and instructions repeated in different words.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m4l1-before">Long (68 words): "Hello, I hope you are doing well. I wanted to ask if you could please help me with something. I have a small restaurant and I am trying to write a social media post about our new weekend offer, and I was wondering if you could write something nice for Instagram that will attract customers and make them want to come."</div>
+        <button class="copy-btn" data-copy="m4l1-before">⧉ Copy</button>
+        <div class="prompt-block" id="m4l1-after">Short (24 words): "Write a 40-word Instagram caption for a seafood restaurant's weekend family thali at ₹799. Warm tone, no hype words. End with: book a table this weekend."</div>
+        <button class="copy-btn" data-copy="m4l1-after">⧉ Copy the short version</button>
+        <div class="practice"><p><b>Practice task:</b> take your longest recent prompt and cut it by a third. Run both versions. If the answers are equally good, keep the short one.</p></div>
+      </section>
+
+      <section class="lesson" id="m4l2">
+        <span class="tag">Module 4 · Lesson 2</span>
+        <h2>Compression Techniques</h2>
+        <p class="lesson-meta">Token Efficiency · 5 min read</p>
+        <p>Compression is the skill of saying the same thing in fewer tokens without losing meaning. Five techniques cover almost every case. First, delete politeness: "please", "could you", "I was wondering if" add nothing the AI needs. Second, replace sentences with lists — a list of five requirements costs fewer tokens than five sentences and is easier for the AI to follow.</p>
+        <p>Third, use labels instead of explanations: "Audience: busy shop owners" beats "The people reading this are busy shop owners who don't have much time." Fourth, move examples into a compact format — a table or a before/after pair instead of a paragraph. Fifth, set the format once and reuse it: "Same format as last time" costs four tokens and carries the entire previous structure.</p>
+        <p>The goal is not the shortest possible prompt. It is the shortest prompt that still produces the right answer. Compress, test, and stop the moment the answer gets worse — that is your floor.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m4l2-before">Wordy: "I need you to write three different email subject lines for me. The emails are about a sale that we are having at our shop. The sale is 20 percent off on all items and it ends on Sunday. The subject lines should be interesting and make people want to open the email."</div>
+        <button class="copy-btn" data-copy="m4l2-before">⧉ Copy</button>
+        <div class="prompt-block" id="m4l2-after">Compressed: "Write 3 email subject lines. Sale: 20% off everything, ends Sunday. Shop: [name]. Max 8 words each. Curiosity, no clickbait, no emojis."</div>
+        <button class="copy-btn" data-copy="m4l2-after">⧉ Copy the compressed version</button>
+        <div class="prompt-block" id="m4l2-b">Compress this request to under 30 words without losing any requirement: [paste your prompt]</div>
+        <button class="copy-btn" data-copy="m4l2-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> pick one prompt you use often and rewrite it with lists and labels instead of sentences. Count the words before and after.</p></div>
+      </section>
+
+      <section class="lesson" id="m4l3">
+        <span class="tag">Module 4 · Lesson 3</span>
+        <h2>Reusable Templates</h2>
+        <p class="lesson-meta">Token Efficiency · 4 min read</p>
+        <p>If you write the same kind of prompt twice, you are paying twice — in tokens and in time. A template is a prompt with the variable parts marked, so the next use costs one paste and three replacements instead of a fresh draft. The best templates come from your own history: look at your last twenty prompts and you will find three or four patterns doing most of the work.</p>
+        <p>A good template has three parts: a fixed frame (the role, the format, the constraints), marked slots for the variable facts, and a one-line note on when to use it. Example frame: "Act as [role]. [Task] for [audience]. Output: [format]. Constraints: [rules]." Fill the slots and send. The frame stays the same for months; only the slots change.</p>
+        <p>Keep your templates in one place — a notes app, a document, a folder. Ten templates cover most daily work: summarise, rewrite, explain, compare, plan, email, script, debug, brainstorm, decide. Build them from prompts that already worked, not from theory.</p>
+        <h4>Example templates</h4>
+        <div class="prompt-block" id="m4l3-a">Summarise template: "Summarise this in [N] bullets, max [N] words each. Bullet 1: the decision. Rest: the evidence. Omit background. If a fact is missing, write 'not stated'. Text: [paste]"</div>
+        <button class="copy-btn" data-copy="m4l3-a">⧉ Copy</button>
+        <div class="prompt-block" id="m4l3-b">Rewrite template: "Rewrite this for [audience]. Tone: [tone]. Max [N] words. Keep all facts and dates. Give the rewrite only, then one line on the biggest change. Text: [paste]"</div>
+        <button class="copy-btn" data-copy="m4l3-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> open your chat history and find one prompt you have used three or more times. Turn it into a template with [slots] and save it where you will find it tomorrow.</p></div>
+      </section>
+
+      <!-- ============ MODULE 5 ============ -->
+      <section class="lesson" id="m5l1">
+        <span class="tag">Module 5 · Lesson 1</span>
+        <h2>Show, Don't Tell</h2>
+        <p class="lesson-meta">Few-Shot &amp; Examples · 4 min read</p>
+        <p>Telling the AI what you want in words is hard, because words like "professional", "funny" or "premium" mean different things to different people. Showing it is easy: give two examples of what good looks like, and the AI copies the pattern. This is few-shot prompting — "few-shot" because a few examples are enough.</p>
+        <p>Two examples beat ten lines of instruction because examples carry information words cannot: sentence length, word choice, rhythm, structure, level of detail. An instruction says "write formally"; an example shows exactly how formal. The AI generalises from the examples to your new input, and the match is usually closer than any description could achieve.</p>
+        <p>Keep examples short and consistent. Two is the minimum that shows a pattern; three is comfortable; five is the practical maximum before tokens and confusion grow. Make sure the examples all follow the same pattern — if they differ, the AI will copy the difference instead of the rule.</p>
+        <h4>Example prompt</h4>
+        <div class="prompt-block" id="m5l1-a">Rewrite each product name below in the style of these examples. Keep the product facts. Match the length and tone exactly. Examples: "Hand-poured soy candle — 40-hour burn, lavender and cedar." / "Cold-pressed groundnut oil — single origin, 1 litre glass bottle." Products: [paste your list]</div>
+        <button class="copy-btn" data-copy="m5l1-a">⧉ Copy</button>
+        <div class="prompt-block" id="m5l1-b">Classify each review below as Positive, Neutral or Negative, following these examples. Example 1: "Food was good but service was slow." → Neutral. Example 2: "Best biryani in the area, will come again." → Positive. Reviews: [paste reviews]</div>
+        <button class="copy-btn" data-copy="m5l1-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take a task where the AI's tone never matches yours. Give it two examples of your own writing and ask it to match them.</p></div>
+      </section>
+
+      <section class="lesson" id="m5l2">
+        <span class="tag">Module 5 · Lesson 2</span>
+        <h2>Style Transfer with Examples</h2>
+        <p class="lesson-meta">Few-Shot &amp; Examples · 4 min read</p>
+        <p>Style transfer is few-shot prompting aimed at voice: make the AI write like a specific person, publication or brand. The trick is the same — show it — but the examples must be chosen for style, not content. Pick examples that show the sentence shape, the vocabulary and the attitude, even if the topic is completely different from what you need.</p>
+        <p>One example is rarely enough for style, because a single text could be a coincidence. Two examples from the same source establish a pattern; three confirm it. Label what you want copied: "Match the sentence length and the direct tone of these examples. Do not copy their topic or their facts." That last line matters — without it, the AI sometimes borrows the example's content along with its style.</p>
+        <p>Style transfer works for rewriting too: "Rewrite this in the style of the example below" is one of the most reliable prompts in existence, because the example does the describing for you.</p>
+        <h4>Example prompts</h4>
+        <div class="prompt-block" id="m5l2-a">Rewrite this announcement in the style of the example below. Match the sentence length and the direct tone exactly. Do not copy the example's topic or facts. Example: [paste a text whose style you like]. Announcement: [paste your text]</div>
+        <button class="copy-btn" data-copy="m5l2-a">⧉ Copy</button>
+        <div class="prompt-block" id="m5l2-b">Write a product description in the voice of [brand or writer]. Here are two samples of their writing: [paste samples]. Now write about [your product]. Keep every fact about my product; copy only the voice.</div>
+        <button class="copy-btn" data-copy="m5l2-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> find one piece of writing whose style you admire. Paste it as an example and ask the AI to rewrite one of your own paragraphs in that style.</p></div>
+      </section>
+
+      <section class="lesson" id="m5l3">
+        <span class="tag">Module 5 · Lesson 3</span>
+        <h2>Consistency at Scale</h2>
+        <p class="lesson-meta">Few-Shot &amp; Examples · 4 min read</p>
+        <p>One good output is easy. Fifty good outputs in the same format is the real problem — menus, product lists, flashcards, captions. The AI drifts: the tenth item looks nothing like the first. Few-shot prompting fixes this by anchoring the pattern: give two complete examples of the finished item, then the full list of inputs, and the AI follows the pattern down the list.</p>
+        <p>Three rules keep large batches consistent. First, show complete examples, not fragments — the AI copies the whole shape, including the parts you forgot to specify. Second, number the inputs and ask for numbered outputs, so nothing gets skipped or merged. Third, cap the batch: twenty items per message stays consistent; fifty starts to drift. Split large lists and use the same examples again for the next batch.</p>
+        <p>When an item in the middle breaks the pattern, do not fix it by hand and move on — add it to your examples. The example set is a living thing: every correction makes the next batch better.</p>
+        <h4>Example prompt</h4>
+        <div class="prompt-block" id="m5l3-a">Write a one-line description for each dish below, in exactly the style of these two examples. Example 1: "Tawa Pomfret — pan-fried in coastal spices, served with onion salad." Example 2: "Chicken Coo Cood — slow-cooked drumsticks, smoky, mild heat." Number your answers to match the list. Do not add dishes. Dishes: [paste numbered list]</div>
+        <button class="copy-btn" data-copy="m5l3-a">⧉ Copy</button>
+        <div class="prompt-block" id="m5l3-b">Turn each note below into a flashcard in this exact format — Q: [question under 15 words] / A: [answer under 25 words]. Follow the two examples, keep the order, number them 1–15. Examples: [paste two flashcards]. Notes: [paste notes]</div>
+        <button class="copy-btn" data-copy="m5l3-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take a list of 10 similar items (dishes, products, topics) and generate one-line descriptions for all of them with two examples as the anchor. Check item 10 against item 1.</p></div>
+      </section>
+
+      <!-- ============ MODULE 6 ============ -->
+      <section class="lesson" id="m6l1">
+        <span class="tag">Module 6 · Lesson 1</span>
+        <h2>Build Your Template Library</h2>
+        <p class="lesson-meta">Prompt Systems · 4 min read</p>
+        <p>A single good prompt saves minutes. A library of good prompts saves hours every week. The library is simply the prompts you actually use, saved in one place, with names you will remember and slots for the parts that change. Most people need only ten to fifteen templates to cover their daily work.</p>
+        <p>Build the library from evidence, not from a list of ideas. Go through your chat history and pull out the prompts that produced results you kept. For each one, write three things: a short name ("Summarise report"), a one-line note on when to use it ("After meetings, for decisions"), and the prompt itself with [slots] for the variable parts. Anything you have used once is a candidate; anything you have used three times belongs in the library.</p>
+        <p>Keep the library where you work — a notes app, a document pinned to your home screen, a folder of text files. Review it monthly: delete templates you never use, and add any prompt that earned its place. A library that grows with your work beats a library of a hundred prompts you never open.</p>
+        <h4>Starter set</h4>
+        <div class="prompt-block" id="m6l1-a">Library entry format — Name: [short name]. Use when: [one line]. Prompt: [the prompt with slots]. Last used: [date]. Works best with: [tool name].</div>
+        <button class="copy-btn" data-copy="m6l1-a">⧉ Copy</button>
+        <div class="prompt-block" id="m6l1-b">Ten templates that cover most work: 1 summarise, 2 rewrite for an audience, 3 explain simply, 4 compare options, 5 plan a week, 6 draft an email, 7 write a script, 8 debug code, 9 brainstorm ideas, 10 make a decision.</div>
+        <button class="copy-btn" data-copy="m6l1-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> create your library file today with just three templates from prompts you have already used. Add one template per week after that.</p></div>
+      </section>
+
+      <section class="lesson" id="m6l2">
+        <span class="tag">Module 6 · Lesson 2</span>
+        <h2>Chaining Prompts Together</h2>
+        <p class="lesson-meta">Prompt Systems · 5 min read</p>
+        <p>A chain is a sequence of prompts where each answer becomes the input of the next. It turns multi-step work into a repeatable process: research, then outline, then draft, then edit — four prompts, each doing one job well, instead of one prompt doing four jobs badly. Chaining is how prompt engineering becomes a workflow instead of a trick.</p>
+        <p>Design a chain backwards from the final result. Ask what the last step needs, then what the step before it must produce, and so on back to the first prompt. A blog post chain looks like this: step 1, research the topic and list five facts; step 2, turn the facts into an outline; step 3, write the draft from the outline; step 4, edit the draft for clarity. Each step is a prompt from your library, and the output of one is pasted into the next.</p>
+        <p>Keep each step's output small and checkable. If step 2 produces a bad outline, fix it before step 3 — a chain carries errors forward, so check at every link. Save the chain as a single document with the prompts in order, so the whole workflow is one copy-paste away next time.</p>
+        <h4>Example chain</h4>
+        <div class="prompt-block" id="m6l2-a">Chain: write a blog post. Step 1: "List 5 surprising facts about [topic], each with a source I can check." Step 2: "Turn these facts into an outline: title, 3 sections, one fact per section. Facts: [paste step 1]." Step 3: "Write a 400-word draft from this outline in a conversational tone. Outline: [paste step 2]." Step 4: "Edit this draft: cut 20%, remove jargon, keep the facts. Draft: [paste step 3]."</div>
+        <button class="copy-btn" data-copy="m6l2-a">⧉ Copy</button>
+        <div class="prompt-block" id="m6l2-b">Chain: plan a week. Step 1: "List everything I must do this week: [paste tasks]." Step 2: "Sort these into must-do, should-do and can-wait, and estimate the time for each." Step 3: "Build a day-by-day plan from the sorted list, hardest task first each day, with one free hour daily."</div>
+        <button class="copy-btn" data-copy="m6l2-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> pick one multi-step task you do every week and write it as a 3-step chain. Run it end to end once, checking each step before moving on.</p></div>
+      </section>
+
+      <section class="lesson" id="m6l3">
+        <span class="tag">Module 6 · Lesson 3</span>
+        <h2>Evaluating Results</h2>
+        <p class="lesson-meta">Prompt Systems · 4 min read</p>
+        <p>The final skill is judgement: knowing whether an answer is good, and what to change when it is not. Without it, you accept the first answer every time — and the first answer is rarely the best one. Evaluation needs criteria written before you see the answer, not after. Decide what good looks like first: accurate, complete, the right length, the right tone, the right format. Then check the answer against that list.</p>
+        <p>When an answer fails, diagnose before you rewrite. Is a fact wrong? Add a source constraint. Is it too long? Add a length limit. Is the tone off? Add a role or an example. Is it missing something? Add it to the context. Each failure points at one missing part of the prompt — fix that part, not the whole prompt.</p>
+        <p>For important work, ask for options instead of one answer: "Give me three versions and label each with its strongest point." Comparing versions teaches you what good looks like faster than any single answer. And keep the best prompts — they are the raw material of your library.</p>
+        <h4>Example prompts</h4>
+        <div class="prompt-block" id="m6l3-a">Evaluate this answer against these criteria: accurate, complete, under 150 words, warm tone. For each criterion, say pass or fail in one line, then rewrite only the parts that failed. Criteria and answer: [paste both]</div>
+        <button class="copy-btn" data-copy="m6l3-a">⧉ Copy</button>
+        <div class="prompt-block" id="m6l3-b">Give me three versions of [the thing you need], each taking a different approach: one safe, one bold, one minimal. Label each with its strongest point and its biggest risk in one line each.</div>
+        <button class="copy-btn" data-copy="m6l3-b">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take the best prompt you have written in this course and score its last answer against five criteria you write first. Fix the one criterion that failed.</p></div>
+      </section>
+
+      <!-- ============ MODULE 7 ============ -->
+      <section class="lesson" id="m7l1">
+        <span class="tag">Module 7 · Lesson 1</span>
+        <h2>Prompting Claude — XML Tags, Projects and Artifacts</h2>
+        <p class="lesson-meta">Pro Prompts · 5 min read</p>
+        <p>Claude is built to follow structure. Where other models guess at the shape of your request, Claude responds best when the parts of a prompt are labelled. The guidance from Anthropic itself is to wrap the pieces in XML tags — &lt;context&gt;, &lt;task&gt;, &lt;instructions&gt;, &lt;examples&gt;, &lt;format&gt; — so the model can tell your facts apart from your instructions. The tags are not magic; they are dividers. A prompt with labelled sections is a prompt the model cannot misread.</p>
+        <p>Claude Projects turn a one-off prompt into a reusable workspace. Set custom instructions once — "Always answer in short paragraphs, and cite the source document" — add files as knowledge, and every chat inside that Project inherits both. For long documents, feed the whole file: Claude's context window holds up to 200,000 tokens, roughly a 500-page book. Then ask it to work from the document only: "Answer using only this document. If it does not say it, write 'not stated'." That single line stops most invented facts.</p>
+        <p>Two more Claude-specific habits. First, when you want something built — a web page, a spreadsheet, a small app — ask Claude to create an Artifact: it produces an interactive result you can preview, edit and download instead of code buried in the chat. Second, for hard reasoning, ask it to think before it answers: "Think step by step before you answer." Claude's extended thinking works the same way — it reasons through the problem first, and the conclusion is far more reliable.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m7l1-before">Weak: "Summarise this report for my team."</div>
+        <button class="copy-btn" data-copy="m7l1-before">⧉ Copy</button>
+        <div class="prompt-block" id="m7l1-after">Strong: "Act as a project manager. &lt;context&gt; Our team is 12 people: 4 developers, 3 designers, 5 support staff. We meet every Monday. &lt;/context&gt; &lt;task&gt; Summarise the attached quarterly report for the team meeting. &lt;/task&gt; &lt;instructions&gt; Use only facts from the report. If a figure is missing, write 'not stated'. &lt;/instructions&gt; &lt;format&gt; Five bullets, max 15 words each. First bullet: the decision. Last bullet: the one action for this week. &lt;/format&gt; Report: [paste report]"</div>
+        <button class="copy-btn" data-copy="m7l1-after">⧉ Copy the strong version</button>
+        <div class="prompt-block" id="m7l1-try">Create an Artifact: a single-page expense tracker for a small shop. Inputs: date, item, amount. Output: a table of expenses and a monthly total. Add a button to export the table as CSV. Clean layout, mobile-first, no external libraries. After the code, list how each requirement is met, one bullet each.</div>
+        <button class="copy-btn" data-copy="m7l1-try">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take one long prompt you use often and rewrite it with XML tags — &lt;context&gt;, &lt;task&gt;, &lt;instructions&gt;, &lt;format&gt;. Run both versions in Claude and compare the answers.</p></div>
+      </section>
+
+      <section class="lesson" id="m7l2">
+        <span class="tag">Module 7 · Lesson 2</span>
+        <h2>Prompting ChatGPT — Custom GPTs, Canvas and Deep Research</h2>
+        <p class="lesson-meta">Pro Prompts · 5 min read</p>
+        <p>ChatGPT rewards two things: a clear goal and the right tool for the job. Before writing the prompt, choose the mode. A quick question goes in a normal chat. A repeated task deserves a custom GPT — a version of ChatGPT with its own instructions, conversation starters and knowledge files, so you set the behaviour once and every chat follows it. A document you need to polish belongs in Canvas, the side-by-side editing workspace where you can change one paragraph instead of regenerating the whole text.</p>
+        <p>For research, use Deep Research, ChatGPT's research agent: give it a brief, not a question. A good brief states the topic, the questions to answer, the sources to prefer, the criteria for a good answer and the format — "a comparison table with a source link in every row" — and then lets the agent work through many sources on its own. The more precise the brief, the less you have to verify afterwards — the agent followed your criteria instead of inventing its own.</p>
+        <p>For reasoning tasks, remember: ChatGPT's reasoning models think before they answer, so state the goal and the constraints — don't script the thinking. "Find the cheapest way to ship 200 kg of rice from Bengaluru to Mangaluru. Constraints: under ₹3,000, delivered within 3 days, road transport only." Over-instructing the steps — "first do this, then do that" — fights the model's own reasoning. Give it the destination and the rules, and let it find the route.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m7l2-before">Weak: "Research the best laptops for students."</div>
+        <button class="copy-btn" data-copy="m7l2-before">⧉ Copy</button>
+        <div class="prompt-block" id="m7l2-after">Strong (Deep Research brief): "Research: the best laptops for a first-year engineering student in India, budget ₹60,000. Answer these questions: (1) which 3 models offer the best value, (2) the current street price for each, (3) battery life in real use. Sources: Indian retailers and reviews published in 2026 only. Criteria: at least 8 GB RAM, 512 GB SSD, weight under 1.8 kg. Format: one comparison table with a source link in every row, then a one-paragraph recommendation."</div>
+        <button class="copy-btn" data-copy="m7l2-after">⧉ Copy the strong version</button>
+        <div class="prompt-block" id="m7l2-try">Open this in Canvas: [paste your draft]. Keep the structure. Rewrite paragraph 2 so a non-technical shop owner understands it in 20 seconds. Do not change any facts or figures. Highlight the sentences you changed.</div>
+        <button class="copy-btn" data-copy="m7l2-try">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> write a Deep Research brief for a question you actually need answered — topic, questions, sources, criteria, format — and run it. Then ask the same question in one line and compare the two results.</p></div>
+      </section>
+
+      <section class="lesson" id="m7l3">
+        <span class="tag">Module 7 · Lesson 3</span>
+        <h2>Prompting Gemini — Gems, NotebookLM and Multimodal Prompts</h2>
+        <p class="lesson-meta">Pro Prompts · 5 min read</p>
+        <p>Gemini's strength is that it is not text-only. It reads images, audio, video and documents in the same conversation, so the best Gemini prompts combine modes: attach the photo and ask about it, upload the PDF and ask it to compare two sections, paste a screenshot of an error and ask for the fix. One clear instruction with the right attachment beats a long text-only prompt every time — the attachment carries the facts, and your words carry the job.</p>
+        <p>For repeated work, build a Gem — Gemini's custom version with its own instructions and files. A Gem for "weekly report writer", with your template and tone rules attached, does in one line what a fresh chat needs a paragraph to set up. For research, Gemini's Deep Research works the same way as ChatGPT's: it drafts a multi-step research plan first. Read the plan, edit it if a step is missing, then let it run — the plan is your chance to steer the research before it starts.</p>
+        <p>The most powerful Gemini habit is source-grounded prompting with NotebookLM. Upload your own sources — PDFs, notes, links — and ask questions that must be answered from those sources only. NotebookLM cites the exact passage behind every claim, so you can check it in one click. And when you need to feed a whole document, do not trim it: Gemini handles very long contexts — a million tokens or more — so paste the full file and let it find what matters.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m7l3-before">Weak: "What does this document say about pricing?"</div>
+        <button class="copy-btn" data-copy="m7l3-before">⧉ Copy</button>
+        <div class="prompt-block" id="m7l3-after">Strong: "Here is a photo of my shop's menu board [attach photo] and the full price list PDF [attach file]. Compare them and list every dish where the board price and the PDF price differ. Format: a table with three columns — dish, board price, PDF price. Do not guess any price: if a dish is missing from one source, write 'not listed'."</div>
+        <button class="copy-btn" data-copy="m7l3-after">⧉ Copy the strong version</button>
+        <div class="prompt-block" id="m7l3-try">Using only the sources in this notebook, answer: what are the three main causes of low footfall mentioned in the reports, and which report mentions each one? Cite the source for every claim.</div>
+        <button class="copy-btn" data-copy="m7l3-try">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take one photo you need analysed — a menu, a bill, a whiteboard — and ask Gemini about it with a specific question and a table format. Then ask the same question without the photo and compare the two answers.</p></div>
+      </section>
+
+      <section class="lesson" id="m7l4">
+        <span class="tag">Module 7 · Lesson 4</span>
+        <h2>High-End Models — System Prompts, Self-Consistency and Meta-Prompting</h2>
+        <p class="lesson-meta">Pro Prompts · 5 min read</p>
+        <p>The techniques in this module work on any model, but they matter most on the high-end ones — the models that can follow detailed instructions, hold long conversations and reason deeply. The first lever is the system prompt: the instruction that sits above the conversation and shapes every answer. In a custom GPT, a Gem or a Claude Project, set the role, the rules and the format once — "You are a strict editor. Never invent facts. Always cite the source." — instead of repeating them in every message.</p>
+        <p>The second lever is self-consistency: ask the model to solve the same problem three times, independently, then compare. If all three agree, trust the answer. If they differ, the disagreement points at the uncertain part — and you can ask the model to resolve it. Few-shot examples strengthen this: two or three solved examples before the real question anchor the model to your format and standard.</p>
+        <p>The loop that ties it together is draft → critique → improve. First, get a draft. Then ask the model to criticise its own work against your criteria: "Score this draft against these five criteria and list what fails." Then feed the critique back: "Fix only the parts that failed." Finally, meta-prompting: when a prompt keeps failing, ask the model to rewrite it — "Improve this prompt so it produces [the result I want]" — and use its version next time. The best prompt engineers let the model help write the prompts.</p>
+        <h4>Before and after</h4>
+        <div class="prompt-block" id="m7l4-before">Weak: "Make this marketing email better."</div>
+        <button class="copy-btn" data-copy="m7l4-before">⧉ Copy</button>
+        <div class="prompt-block" id="m7l4-after">Strong: "Critique this email against these 5 criteria: (1) subject under 8 words, (2) one clear offer, (3) price stated, (4) no hype words, (5) call to action in the last line. Score each criterion pass or fail in one line, then rewrite only the parts that failed. Email: [paste email]"</div>
+        <button class="copy-btn" data-copy="m7l4-after">⧉ Copy the strong version</button>
+        <div class="prompt-block" id="m7l4-try">Solve this problem three separate times, showing your working each time: [paste problem]. Then compare the three answers: if they agree, give the final answer; if they differ, explain which answer is most likely correct and why.</div>
+        <button class="copy-btn" data-copy="m7l4-try">⧉ Copy</button>
+        <div class="practice"><p><b>Practice task:</b> take the best prompt in your library and run the loop on it: get the draft, ask the model to critique it against 5 criteria you write, fix the failures, then ask the model to improve the prompt itself.</p></div>
+        <div class="callout callout-end">
+          <h3>Course complete — what now?</h3>
+          <p style="color: var(--muted); margin-bottom: 14px;">You have the framework, the coding prompts, the problem-solving method, the token discipline, the few-shot technique, the system to keep it all — and now the platform-specific pro prompts for Claude, ChatGPT and Gemini. The next step is not another course — it is twenty prompts a week, every week, with your library growing as you go.</p>
+          <a class="btn btn-grad btn-sm" href="free-prompts.html">Revisit the free prompts</a>
+        </div>
+      </section>
+
+      <div class="reader-nav">
+        <button class="btn btn-ghost" id="reader-prev">← Previous lesson</button>
+        <button class="btn btn-grad" id="reader-next">Next lesson →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html" style="margin-bottom:10px;"><span class="logo-mark">✦</span><span>Prompt <em>Engineering</em></span></a>
+        <p style="max-width:300px;">Learn the skill that replaces coding. Free prompts and a practical advanced course in prompt engineering.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom:10px;">Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="free-prompts.html">Free Prompts</a>
+        <a href="advanced.html">Advanced Course</a>
+      <a href="about.html">About</a>
+      </div>
+      <div>
+        <h4 style="margin-bottom:10px;">Contact</h4>
+        <a href="mailto:nizampj23@gmail.com">nizampj23@gmail.com</a>
+        <a href="advanced.html">Pay ₹49 via UPI</a>
+      </div>
+    </div>
+    <p class="foot-note">© 2026 Prompt Engineering. This reader is for on-screen reading only. All prompts are free to use for personal and commercial work.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
